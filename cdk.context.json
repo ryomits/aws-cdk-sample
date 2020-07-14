@@ -1,0 +1,11 @@
+{
+  "availability-zones:account=951528701507:region=ap-northeast-1": [
+    "ap-northeast-1a",
+    "ap-northeast-1c",
+    "ap-northeast-1d"
+  ],
+  "hosted-zone:account=951528701507:domainName=feedback-cloud.com.:region=ap-northeast-1": {
+    "Id": "/hostedzone/Z0175947XMAL735D9WS9",
+    "Name": "feedback-cloud.com."
+  }
+}

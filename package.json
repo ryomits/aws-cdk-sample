@@ -1,0 +1,63 @@
+{
+  "name": "aws-cdk-sample",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "private": true,
+  "bin": {
+    "aws": "bin/aws.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest",
+    "predeploy": "yarn build",
+    "deploy": "cdk deploy",
+    "deploy:staging": "NODE_ENV=staging dotenv -e .env.staging yarn deploy",
+    "deploy:production": "NODE_ENV=production dotenv -e .env.production yarn deploy",
+    "predestroy": "yarn build",
+    "destroy": "cdk destroy",
+    "destroy:staging": "NODE_ENV=staging dotenv -e .env.staging yarn destroy",
+    "destroy:production": "NODE_ENV=production dotenv -e .env.production yarn destroy",
+    "presynth": "yarn build",
+    "synth": "cdk synth",
+    "synth:staging": "NODE_ENV=staging dotenv -e .env.staging yarn synth",
+    "synth:production": "NODE_ENV=production dotenv -e .env.production yarn synth",
+    "prediff": "yarn build",
+    "diff": "cdk diff",
+    "diff:staging": "NODE_ENV=staging dotenv -e .env.staging yarn diff",
+    "diff:production": "NODE_ENV=production dotenv -e .env.production yarn diff",
+    "lint": "eslint \"./lib/**/*[!.d].ts\"",
+    "lint:fix": "run-s \"lint --fix\""
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "1.51.0",
+    "@types/jest": "^25.2.1",
+    "@types/node": "10.17.5",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "aws-cdk": "1.49.1",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "jest": "^25.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.3.1",
+    "ts-node": "^8.1.0",
+    "typescript": "~3.7.2"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-cloudfront": "^1.51.0",
+    "@aws-cdk/aws-ec2": "^1.50.0",
+    "@aws-cdk/aws-elasticloadbalancingv2": "^1.51.0",
+    "@aws-cdk/aws-elasticloadbalancingv2-targets": "^1.51.0",
+    "@aws-cdk/aws-iam": "^1.51.0",
+    "@aws-cdk/aws-rds": "^1.51.0",
+    "@aws-cdk/aws-route53": "^1.51.0",
+    "@aws-cdk/aws-route53-targets": "^1.51.0",
+    "@aws-cdk/aws-s3": "^1.51.0",
+    "@aws-cdk/core": "1.51.0",
+    "dotenv-cli": "^3.2.0",
+    "source-map-support": "^0.5.16"
+  }
+}
